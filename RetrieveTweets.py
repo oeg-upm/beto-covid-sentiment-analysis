@@ -81,5 +81,5 @@ def getTweets(keyword, nTweets):
 
 # main body
 tweets = getTweets(keyword, amount)
-output_file = os.path.join(save_directory, 'twitter_dataset.csv')
-tweets.to_csv(output_file)
+output_file = os.path.join(save_directory, 'twitter_dataset.tsv')
+tweets.to_csv(output_file, sep='\t')

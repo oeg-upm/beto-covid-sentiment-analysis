@@ -405,7 +405,7 @@ def fineTunning(trainData, testData, save_model = False):
 
   return bert_classifier
 
-df_train = pd.read_csv(train_dataset)
-df_test = pd.read_csv(test_dataset)
+df_train = pd.read_csv(train_dataset, sep='\t')
+df_test = pd.read_csv(test_dataset, sep='\t')
 
 beto_classifier = fineTunning(df_train, df_test, save_model=save_flag)
