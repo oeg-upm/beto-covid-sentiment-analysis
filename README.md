@@ -1,6 +1,8 @@
 # beto-covid-sentiment-analysis
 Research project of Sentiment Analysis based on [this code](https://skimai.com/fine-tuning-bert-for-sentiment-analysis/) and using [this BETO model](https://github.com/dccuchile/beto).
 
+_Note_: to gain access to the dataset, please, contact with [SerPablo (Pablo Calleja)](https://github.com/SerPablo)
+
 ## Description of the Scripts
 - ### _RetrieveTweets.py_:
   This script creates a dataset of tweets based on the keywords given and the number of tweets to be retrieved.
