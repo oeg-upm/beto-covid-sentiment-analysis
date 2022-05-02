@@ -314,7 +314,7 @@ def fineTunning(train_data, test_data, save_model = False):
     predictions = {}
     predictions['user'] = test_data['user'].values
     for key in labels:
-        output = trainers[key].predict(Dataset.from_pandas(df_test))
+        output = trainers[key].predict(ds_test)
         predictions[key] = np.argmax(output[0], axis=-1)
 
     df_output = pd.DataFrame(predictions)
