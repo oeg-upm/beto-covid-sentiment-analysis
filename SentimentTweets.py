@@ -288,6 +288,7 @@ def fineTunning(train_data, test_data, save_model = False):
     ds_test.set_format(type='torch', columns=['input_ids', 'attention_mask'])
     preprocessed_group = preprocess_for_labels(ds_group)
 
+    # Train & Evaluation
     trainers = {}
     f1_group = {}
     for key in labels:
@@ -311,6 +312,7 @@ def fineTunning(train_data, test_data, save_model = False):
 
     print('final f1 score: ' + str(final_f1/len(f1_group)))
 
+    # Test
     predictions = {}
     predictions['user'] = test_data['user'].values
     for key in labels:
